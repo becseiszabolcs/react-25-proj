@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 
+
 export default function RandomColor(){
     const [colorType, setColorType] = useState('');
     const [color, setColor] = useState('');
@@ -51,9 +52,7 @@ export default function RandomColor(){
     }
 
     return(
-        <div className="waper" style={{
-            width:"100vw",
-            height:"100hv",
+        <div className="wrapper" style={{
             background: color
 
         }}>
@@ -63,7 +62,7 @@ export default function RandomColor(){
                 <button className="genbtn" onClick={()=>colorGen('')}>Create Randomcolor color</button>
             </div>
             <div>
-                {colorType=='rgb'?<h2>RGB color</h2>:colorType=='hex'?<h2>HEX color</h2>:null}
+                {colorType=='rgb'?<h2>RGB color</h2>:colorType=='hex'?<h2>HEX color</h2>:<h2>Generate color</h2>}
                 <h1>{color}</h1>
             </div>
         </div>

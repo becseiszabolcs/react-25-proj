@@ -1,6 +1,6 @@
 import { useState } from "react"
 import dataList from "./data";
-import './style.css'
+
 
 export default function Accordian(){
 

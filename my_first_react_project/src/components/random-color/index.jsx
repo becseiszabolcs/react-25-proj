@@ -6,35 +6,29 @@ export default function RandomColor(){
     const [colorType, setColorType] = useState('');
     const [color, setColor] = useState('');
 
-    function randint(max,min=0) {
+    function randint(max=10,min=0) {
         return Math.floor(Math.random() * (max - min)) + min;
-    }
-    function invertHex(hex) {
-        return (Number(`0x1${hex}`) ^ 0xFFFFFF).toString(16).toUpperCase() 
     }
 
     function HEXColorGen(){
 
         const hexList = [];
-        for (let i = 0; i <= 15; i++) hexList.push(i.toString(16).toUpperCase()); // hexadecimal number system characters
+        for (let i = 0; i <= 15; i++) hexList.push(i.toString(16).toUpperCase()); // hexadecimal number system local value
 
         let hexcolor = '#';
-        for(var i=0;i<6;i++) hexcolor+=hexList[randint(16)];
+        for(var i=0;i<6;i++) hexcolor+=hexList[randint(hexList.length)];
          
         return hexcolor;
     }
 
     function RGBColorGen(){
         const nums = [];
+        for(var i=0;i<3;i++) nums.push(randint(256)); 
 
-        for(var i=0;i<3;i++) nums.push(randint(256));
-        const rgbColor = `rgb(${nums.join(",")})`;
-
-        return rgbColor;
+        return `rgb(${nums.join(",")})`;
     }
     
     function colorGen(color_type){
-
 
         if(color_type == '') {
             if(colorType != '') color_type = colorType ;

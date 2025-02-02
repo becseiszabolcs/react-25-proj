@@ -13,7 +13,7 @@ function App() {
         <>
           <Accordian/>
           <RandomColor/>
-          <StarRating starsnum={'10'}/>
+          <StarRating starsnum={'20'}/>
           <ImageSlider url={'https://picsum.photos/v2/list?page=1'} limit={10}/>
         </>
 

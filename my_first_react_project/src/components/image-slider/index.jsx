@@ -32,7 +32,8 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
     },[url]);
 
     const prevImg = () => selectedImg>0 ? setImg(selectedImg-1):null;
-    const nextImg = () => selectedImg<images.length ? setImg(selectedImg+1):null;
+    const nextImg = () => selectedImg < images.length-1 ? setImg(selectedImg+1):null;
+
 
     
 
@@ -60,7 +61,7 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
                     )
 
                 }
-            </div>
+            
             <div className="control">
                 <BsArrowLeftCircleFill onClick={()=>{prevImg()}}className="arrow left-arrow" size={25}/>
                 
@@ -74,6 +75,7 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
 
                 <BsArrowRightCircleFill onClick={()=>{nextImg()}} className="arrow right-arrow" size={25}/>
 
+            </div>
             </div>
 
         </div>

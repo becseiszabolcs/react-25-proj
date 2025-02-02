@@ -28,7 +28,7 @@ export default function Accordian(){
             <div className="accordian">
                 {
                     dataList && dataList.length > 0 ? dataList.map((dataItem) => (
-                    <div className="item">
+                    <div key={dataItem.id} className="item">
                         <div className="title" onClick={multi_selection ? ()=>Selection(dataItem.id) : ()=>Select(dataItem.id)} >
                             <h3>{dataItem.question}</h3>
 

@@ -1,0 +1,55 @@
+.image-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 25px;
+
+    background-color: rgb(0, 0, 0);
+    img{
+        max-height: 60vh;
+    }
+    .image-hidden{
+        display: none;
+    }
+
+}
+.control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    color: whitesmoke;
+
+    .indicators{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: rgba(128, 128, 128, 0.247);
+        border-radius: 50px;
+        margin:10px;
+        padding:5px;
+        .indicator{
+            all:unset;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            margin: 2px;
+
+            background-color: gray;
+
+        }
+        .indicator:hover{
+            background-color: rgba(245, 245, 245, 0.74);
+        }
+        .indicator-selected{
+            background-color: whitesmoke;
+        }
+
+    }
+
+    
+}

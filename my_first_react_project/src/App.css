@@ -82,3 +82,9 @@ button{
   margin: 5px;
   
 }
+.active{
+  color: yellow;
+}
+.inactive{
+  color: gray;
+}

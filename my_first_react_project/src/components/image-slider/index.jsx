@@ -31,14 +31,9 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
         if(url!=="") fetchImg(url,limit,page);
     },[url]);
 
+    const prevImg = () => selectedImg>0 ? setImg(selectedImg-1):null;
+    const nextImg = () => selectedImg<images.length ? setImg(selectedImg+1):null;
 
-    function prevImg(){
-        if(selectedImg>0) setImg(selectedImg-1);
-    }
-    function nextImg(){
-        if(selectedImg<images.length) setImg(selectedImg+1);
-
-    }
     
 
     /*console.log(images);*/

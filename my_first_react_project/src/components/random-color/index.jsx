@@ -6,9 +6,8 @@ export default function RandomColor(){
     const [colorType, setColorType] = useState('');
     const [color, setColor] = useState('');
 
-    function randint(max=10,min=0) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
+    const randint=(max=10,min=0) => Math.floor(Math.random() * (max - min)) + min;
+    
 
     function HEXColorGen(){
 

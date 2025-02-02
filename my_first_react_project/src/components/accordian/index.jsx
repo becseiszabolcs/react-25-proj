@@ -8,9 +8,8 @@ export default function Accordian(){
     const [multi_selection, setenableMS] = useState(false);
     const [selection, setSeletion] = useState([]);
 
-    function Select(id){
-        setSelected(id === selected ? null : id);
-    }
+    const Select= (id)=> setSelected(id === selected ? null : id);
+
     function Selection(id){
         let copy_selection = [...selection];
         const findId = copy_selection.indexOf(id); 

@@ -18,19 +18,10 @@ export default function StarRating({starsnum = 5}){
         return li;
     }
 
+    const setRate = (index) => index===rating? setRating(0):setRating(index);
 
-    function setRate(index){
-        if(index===rating) setRating(0);
-        else               setRating(index);
+    const mouseHover = (index,isHover=false) => isHover? setHover(index):setHover(0);
 
-    }
-
-    function mouseHover(index,isHover=false){
-        if(isHover) setHover(index);
-        else        setHover(0);
-        
-
-    }
 
     
     return(

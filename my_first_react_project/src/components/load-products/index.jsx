@@ -32,12 +32,10 @@ export default function LoadProducts({url}){
         
     }
     function loadMore(max,total){
+        setTimeout(2500);
         if(total>(count+1)*20){
             setCount(max+1);
         }
-        
-
-
     }
     //const loadMore = (max,total)=>
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {BsArrowLeftCircleFill,BsArrowRightCircleFill} from "react-icons/bs";
-import "./style.css"
+import "./style.css";
 
 export default function ImageSlider({url,limit = 5 ,page = 1}){
 
@@ -31,8 +31,8 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
         if(url!=="") fetchImg(url,limit,page);
     },[url]);
 
-    const prevImg = () => selectedImg>0 ? setImg(selectedImg-1):null;
-    const nextImg = () => selectedImg < images.length-1 ? setImg(selectedImg+1):null;
+    const prevImg = () => selectedImg>0 ? setImg(selectedImg-1):setImg(images.length-1);
+    const nextImg = () => selectedImg < images.length-1 ? setImg(selectedImg+1):setImg(0);
 
 
     
@@ -62,20 +62,19 @@ export default function ImageSlider({url,limit = 5 ,page = 1}){
 
                 }
             
-            <div className="control">
-                <BsArrowLeftCircleFill onClick={()=>{prevImg()}}className="arrow left-arrow" size={25}/>
-                
-                <span className="indicators">
-                    {
-                        images && images.length ? images.map((_,index)=>(
-                            <button onClick={()=>{setImg(Number(index))}} key={index} className={selectedImg==index?"indicator indicator-selected":"indicator"}></button>
-                        )):null
-                    }
-                </span>
+                <div className="control">
+                    <BsArrowLeftCircleFill onClick={()=>{prevImg()}}className="arrow left-arrow" size={25}/>
+                    
+                    <span className="indicators">
+                        {
+                            images && images.length ? images.map((_,index)=>(
+                                <button onClick={()=>{setImg(Number(index))}} key={index} className={selectedImg==index?"indicator indicator-selected":"indicator"}></button>
+                            )):null
+                        }
+                    </span> 
 
-                <BsArrowRightCircleFill onClick={()=>{nextImg()}} className="arrow right-arrow" size={25}/>
-
-            </div>
+                    <BsArrowRightCircleFill onClick={()=>{nextImg()}} className="arrow right-arrow" size={25}/>
+                </div>
             </div>
 
         </div>

@@ -1,0 +1,27 @@
+.Products-list{
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    .product{
+        width: 15vw;
+        min-width: 200px;
+        background-color: rgba(128, 128, 128, 0.623);
+        margin:15px;
+        padding: 15px;
+        border-radius: 15px;
+        img{
+            width: 100%;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.678);
+        }
+        h1{
+            font-size: 20px;
+            line-height: 1.1;
+            border-radius: 15px;
+
+
+        }
+        
+    }
+}

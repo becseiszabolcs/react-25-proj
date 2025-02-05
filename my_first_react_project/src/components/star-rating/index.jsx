@@ -4,7 +4,7 @@ import {FaStar} from "react-icons/fa"
 
 export default function StarRating({starsnum = 5}){
     const [rating, setRating] = useState(0);
-    const [hover,setHover] = useState(0);
+    const [hover,setHover] = useState(-1);
     const starsNum = Number(starsnum);
 
     function range(start=0,len){
